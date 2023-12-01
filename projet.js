@@ -78,52 +78,6 @@ let likeFilm = (index) => {
 
 
 appendTable();
-let favoritfilms = [];
-    let favorites = [];
-
-    let addfavoritFilm = (name, rating, category, image) => {
-      let obj = {
-        name: name,
-        rating: rating,
-        category: category,
-        image: image,
-        likes: 0,
-      };
-      films.push(obj);
-    };
-
-    let appendTableoffavoritfilm = () => {
-      sortByCategory();
-
-      let tableHtml = "<table border='1'><tr><th>Name</th><th>Rating</th><th>Category</th><th>Image</th></tr>";
-
-      
-
-      $(".add-to-favorites").click(function () {
-        let index = $(this).data("index");
-        addToFavorites(index);
-      });
-    };
-
-    let sortthefavotilistbycat = () => {
-      films.sort((a, b) => {
-        let categoryA = a.category.toLowerCase();
-        let categoryB = b.category.toLowerCase();
-
-        if (categoryA < categoryB) {
-          return -1;
-        }
-        if (categoryA > categoryB) {
-          return 1;
-        }
-        return 0;
-      });
-    };
-
-    let likeFilms = (index) => {
-      films[index].likes = films[index].likes ? films[index].likes + 1 : 1;
-      appendTable();
-    };
 
     let addToFavorites = (index) => {
       let film = films[index];

@@ -55,8 +55,8 @@ tr{
   text-align: center;
 }
 .search-bar{
-  width:100%;
-  max-width: 700px;
+  width:50%;
+  max-width: 300px;
   background:rgba(255,255,255,0.2);
   display: flex;
   align-items: center;
@@ -64,7 +64,7 @@ tr{
   padding: 10px 20px;
   align-items: center;
   justify-content: center;
-  backdrop-filter:blur(4px) saturate(100%) ;
+  backdrop-filter:blur(4px) saturate(50%) ;
 }
 .search-bar input{
   background: transparent;
@@ -117,4 +117,22 @@ transition: 0.6s ease;
 h2 :hover{
   background-color: #fff;
   color:#000
+}
+#favorites {
+  overflow: hidden; 
+}
+
+
+#favorites-list {
+  float: center;
+}
+
+#manage-favorites-btn {
+  float: center;
+}
+h2{text-align:center ;}
+#favorites {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
